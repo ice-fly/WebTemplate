@@ -1,0 +1,43 @@
+.navisect {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  min-height: 10vh;
+  background-color: #000
+}
+
+.footsect {
+  display: block;
+}
+
+.downgrad {
+  min-height: 5vh;
+  background-image: linear-gradient(#000, transparent);
+}
+
+.upgrad {
+  min-height: 5vh;
+  background-image: linear-gradient(transparent,#000);
+}
+
+.splashsection {
+  min-height: 90vh;
+}
+
+.container {
+  min-height: 90vh;
+}
+
+.container.splash {
+  min-height: 80vh;
+}
+
+.colorsect {
+  min-height: 90vh;
+  background-color: #000
+}
+
+.footersect {
+  min-height: 10vh;
+  background-color: #000
+}
