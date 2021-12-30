@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<head>
+    <meta http-equiv="Refresh" content="21; URL='index.html'">
+    <meta http-equiv="content-language" content="en-us">
+    <meta name="description" content="A fun 404 page, to coundown to liftoff!">
+    <title>404 - Launch Sequence Not Found</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,700;1,700&display=swap"
+        rel="preload" as="style" />
+    <link href="style.css" rel="preload" as="style" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/s/ibmplexsans" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,700;1,700&display=swap"
+        rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="img/webclip.png" rel="apple-touch-icon" />
+</head>
+
+<body>
+    <nav>
+        <div class="nav" id="nav">
+            <a href="#home">Home</a>
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+            <a href="javascript:void(0);" class="icon" onclick="navToggle(document.getElementById('nav'))">
+                <svg width=5vh height=5vh viewBox="0 0 32 32">
+                    <path fill="#fff"
+                        d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2 s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2 S29.104,22,28,22z" />
+                </svg>
+            </a>
+        </div>
+    </nav>
+    <main class="prlx">
+        <section class="splashsect">
+            <div class="downgrad"></div>
+            <div class="container">
+                <h1 class="url">Launch Sequence Not Found</h1>
+                <h2>The page you are looking for doesn't exist or has been moved</h2><br />
+                <h3 id="secs" style="text-align: center;">Returning to home...</h3><br />
+            </div>
+            <div class="upgrad"></div>
+        </section>
+        <footer>
+            <script defer src="js/CountdownRedirect.js" type="text/javascript"></script>
+            <script async src="js/nav.js" type="text/javascript"></script>
+        </footer>
+    </main>
+</body>
+
+</html>

@@ -1,40 +1,127 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <style>
-        .wf-force-outline-none[tabindex="-1"]:focus {
-            outline: none;
-        }
-    </style>
     <meta charset="utf-8">
-    <title>ERPLSPACE</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="content-language" content="en-us">
+    <title>Template</title>
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,700;1,700&display=swap"
+        rel="preload" as="style" />
+    <link href="style.css" rel="preload" as="style" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/s/ibmplexsans" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,700;1,700&display=swap"
+        rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="img/webclip.png" rel="apple-touch-icon" />
 </head>
+
 <body>
-    <div class="navisect wf-section"></div>
-    <div class="splashsection wf-section">
-        <div class="downgrad"></div>
-        <div class="container splash w-container"></div>
-        <div class="upgrad"></div>
-    </div>
-    <div class="colorsect wf-section">
-        <div class="container w-container"></div>
-    </div>
-    <div class="splashsection wf-section">
-        <div class="downgrad"></div>
-        <div class="container w-container"></div>
-        <div class="upgrad"></div>
-    </div>
-    <div class="colorsect wf-section">
-        <div class="container w-container"></div>
-    </div>
-    <div class="splashsection wf-section">
-        <div class="downgrad"></div>
-        <div class="container w-container"></div>
-        <div class="upgrad"></div>
-    </div>
-    <div class="footersect wf-section"></div>
+    <nav>
+        <div class="nav" id="nav">
+            <a href="#home">Home</a>
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+            <a href="javascript:void(0);" class="icon" onclick="navToggle(document.getElementById('nav'))">
+                <svg width=5vh height=5vh viewBox="0 0 32 32">
+                    <path fill="#fff"
+                        d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2 s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2 S29.104,22,28,22z" />
+                </svg>
+            </a>
+        </div>
+    </nav>
+    <main class="prlx">
+        <section class="splashsect prlx-grp" id="home">
+            <div class="prlx-lyr prlx-lyr-base">
+                <div class="downgrad"></div>
+                <div class="upgrad"></div>
+            </div>
+            <div class="prlx-lyr prlx-lyr-back">
+                <div class="container">
+
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In rhoncus in sapien sit amet scelerisque.
+                    Nulla non sem varius, viverra lorem in, malesuada lectus. Aenean pulvinar aliquam nulla, id
+                    scelerisque magna facilisis id. Quisque at rhoncus leo. Etiam nisl turpis, cursus eu interdum eget,
+                    congue eget libero. Cras facilisis laoreet mauris vel tincidunt. Mauris malesuada ex eu elit
+                    imperdiet, non rhoncus justo pulvinar. Etiam faucibus condimentum lectus vitae ullamcorper. Donec
+                    placerat dignissim faucibus. Duis quam ante, hendrerit in diam nec, malesuada semper lorem. Duis nec
+                    porttitor nunc. Aliquam tellus massa, rhoncus in venenatis id, elementum sit amet ante. Maecenas
+                    faucibus in odio ac porta. Nam pulvinar condimentum nibh eget feugiat. Pellentesque ut efficitur
+                    augue.
+                    <br />
+
+                </div>
+            </div>
+        </section>
+        <section class="colorsect">
+            <div class="container"></div>
+        </section>
+        <section class="splashsect">
+            <div class="downgrad"></div>
+            <div class="container">
+
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In rhoncus in sapien sit amet scelerisque.
+                Nulla non sem varius, viverra lorem in, malesuada lectus. Aenean pulvinar aliquam nulla, id scelerisque
+                magna facilisis id. Quisque at rhoncus leo. Etiam nisl turpis, cursus eu interdum eget, congue eget
+                libero. Cras facilisis laoreet mauris vel tincidunt. Mauris malesuada ex eu elit imperdiet, non rhoncus
+                justo pulvinar. Etiam faucibus condimentum lectus vitae ullamcorper. Donec placerat dignissim faucibus.
+                Duis quam ante, hendrerit in diam nec, malesuada semper lorem. Duis nec porttitor nunc. Aliquam tellus
+                massa, rhoncus in venenatis id, elementum sit amet ante. Maecenas faucibus in odio ac porta. Nam
+                pulvinar condimentum nibh eget feugiat. Pellentesque ut efficitur augue.
+                <br />
+                Curabitur mi purus, malesuada eu sagittis eu, sollicitudin aliquet nisl. Nunc id diam nec nisl tempor
+                lobortis non in dui. Pellentesque et vestibulum sem, at viverra ipsum. Mauris at blandit dui, sed
+                maximus elit. Integer vestibulum tortor vitae dignissim facilisis. In hac habitasse platea dictumst. In
+                ultricies venenatis tellus malesuada lobortis. Ut viverra arcu quis ultrices mattis. Sed at ipsum
+                euismod ante sagittis tristique in lacinia arcu.
+                <br />
+                Maecenas sit amet nulla mauris. Praesent nisi mi, ornare id feugiat at, ullamcorper in risus. Interdum
+                et malesuada fames ac ante ipsum primis in faucibus. Morbi eget magna non mauris luctus varius. Cras leo
+                magna, volutpat id tellus at, tincidunt consequat eros. Integer et enim vel tortor malesuada dictum ut
+                sed turpis. Vivamus dictum blandit eros, ut laoreet ipsum molestie eget. Pellentesque vestibulum mauris
+                quis tellus sagittis, a facilisis nisl pulvinar. Suspendisse vel scelerisque ex. In semper id nisl id
+                rhoncus. Nullam felis nisi, hendrerit nec diam eu, euismod porttitor purus. Donec eu bibendum nibh.
+                Donec id justo auctor odio sagittis volutpat quis vel lacus. Cras et fermentum nisl, sed gravida lectus.
+                Vestibulum sit amet maximus diam.
+                <br />
+                Morbi facilisis, erat sit amet laoreet vestibulum, purus elit scelerisque mi, et congue nisl sem eu
+                urna. Nullam sit amet lorem semper quam pretium ullamcorper. Mauris rhoncus in ex id ultrices. Cras nec
+                nunc sit amet dolor dignissim commodo quis ac enim. Phasellus et porttitor leo. Pellentesque maximus
+                bibendum velit posuere pretium. Quisque ac ligula nec augue imperdiet eleifend eu in ligula. In at nibh
+                quis nunc luctus volutpat eu non ipsum. Vestibulum quam tellus, pulvinar at condimentum et, congue at
+                libero. Ut vel consectetur enim. Nulla facilisi. Aenean rhoncus sollicitudin blandit. Etiam faucibus
+                rhoncus sapien a tempor. Aliquam urna dui, facilisis a velit id, pellentesque sagittis turpis. Fusce
+                scelerisque mi risus, sit amet ultrices ante ullamcorper sed.
+                <br />
+                Etiam mattis eleifend enim vitae elementum. Nam a turpis sit amet lacus volutpat consectetur. Fusce elit
+                ipsum, imperdiet eget ultricies in, dapibus ac ligula. Sed urna ante, elementum posuere orci in, laoreet
+                elementum risus. Nam dapibus a diam quis ullamcorper. Fusce vel lacus turpis. Pellentesque purus nibh,
+                condimentum ornare enim vitae, gravida ultricies elit.
+
+            </div>
+            <div class="upgrad"></div>
+        </section>
+        <section class="colorsect">
+            <div class="container"></div>
+        </section>
+        <section class="splashsect">
+            <div class="downgrad"></div>
+            <div class="container"></div>
+            <div class="upgrad"></div>
+        </section>
+
+        <footer>
+            <script async src="js/nav.js" type="text/javascript"></script>
+        </footer>
+    </main>
 </body>
+
 </html>
