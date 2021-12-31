@@ -1,94 +1,181 @@
 body, html {
   --off-txt-clr: #fff;
-  --backing-clr: #000;
+  --highlight-clr: SteelBlue;
+  --backing-clr: Navy;
   --margins: 5vh 20vw;
   font-family: 'IBM Plex Sans', sans-serif;
-  color: #000;
+  color: var(--backing-clr);
   font-weight: 400;
   outline: var(--backing-clr) solid 1px;
+	word-wrap:break-word;
   overflow: hidden;
 }
 /* Navigation & responsiveness */
-nav {
+.navigation {
   position: sticky;
-  top: 0;
+  width: 100vw;
   min-height: 10vh;
+  overflow-y: show;
   color: var(--off-txt-clr);
   background-color: var(--backing-clr);
-  overflow: hidden;
   font-weight: 700;
-  font-size: 5vh;
+  z-index: 10;
+}
+.nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+.nav .main-nav {
+  display: none;
+  position: relative;
+}
+
+#tn:checked + .main-nav {
+  display: block;
+}
+
+.nav input[type="checkbox"], 
+.nav ul span.drop-icon {
+  display: none;
+}
+
+.nav li, 
+#toggle-nav, 
+.nav .sub-nav {
+  border-style: solid;
+  border-color: var(--backing-clr);
+}
+
+.nav li, 
+#toggle-nav {
+  border-width: 0 0 1px;
+}
+
+.nav .sub-nav {
+  background-color: inherit;
+  border-width: 1px 1px 0;
+  margin: 1em 1em;
+}
+
+.nav li, 
+#toggle-nav {
+  position: relative;
+  display: block;
+  color: inherit;
 }
 
 .nav a {
-  float: left;
-  display: block;
-  text-align: center;
-  padding: 2vh 2vw;
-  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  color: inherit;
 }
 
-.nav a:link,.nav a:visited{
-  color: var(--off-txt-clr);
+.nav, 
+#toggle-nav {
+  background-color: var(--backing-clr);
+}
+ 
+.nav li {
+  padding: 1em 1.5em;
 }
 
-.nav a:hover:not(.icon) {
-  background-color: var(--off-txt-clr);
+.nav a {
+  transition: all .125s ease-in-out;
+  -webkit-transition: all .125s ease-in-out;
+}
+
+.nav li:hover {
+  background-color: var(--highlight-clr);
   color: var(--backing-clr);
 }
 
-.nav a.active,.nav a:active {
+.nav .sub-nav {
+  display: none;
+}
+
+.nav input[type="checkbox"]:checked + .sub-nav {
+  display: block;
+}
+
+.nav .sub-nav li:hover {
+  background-color: var(--backing-clr);
   color: var(--off-txt-clr);
-  text-shadow:
-  0px 0px 5vh var(--off-txt-clr),
-  0px 0px 5vh var(--off-txt-clr)
 }
 
-.nav .icon {display: none;}
-
-@media screen and (max-width: 1080px) {
-    body, html{
-        --margins: 5vh 10vw;
-    }
-    nav {
-        font-size: 4vh;
-    }
-}
-@media screen and (max-width: 800px) {
-    body, html{
-        --margins: 5vh 5vw;
-    }
-    nav {
-        font-size: 3vh;
-    }
+#toggle-nav .drop-icon, 
+.nav li label.drop-icon {
+  position: absolute;
+  right: 1.618em;
+  top: 1em;
 }
 
-@media screen and (max-width: 800px) {
-  .nav a:not(:first-child) {display: none;}
-  .nav a:first-child {float: none}
-  .nav a.icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-    float: right;
+.nav label.drop-icon, #toggle-nav span.drop-icon {
+  border-radius: 0.618em;
+  width: 1.618em;
+  height: 1.618em;
+  text-align: center;
+  background-color: var(--backing-clr);
+  color: var(--off-txt-clr);
+}
+
+.nav .drop-icon {
+  line-height: 1.618;
+}
+
+@media only screen and (min-width: 52em) {
+  .nav .main-nav {
     display: block;
-    text-align: center;
   }
-  .nav.expanded {position: relative;}
-  .nav.expanded .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
+
+  .nav label.drop-icon,#toggle-nav span.drop-icon {
+    display: none;
   }
-  .nav.expanded a {
+
+  .nav ul span.drop-icon {
+    display: inline;
+  }
+
+  .nav li,.nav a {
+    float: left;
+    min-height: 5vh;
+    vertical-align: middle;
+  }
+
+  .nav .sub-nav li {
     float: none;
+  }
+
+  .nav .sub-nav {
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 12em;
+  }
+
+  .nav .sub-nav, 
+  .nav input[type="checkbox"]:checked + .sub-nav {
+    display: none;
+  }
+
+  .nav .sub-nav li {
+    color: inherit;
+  }
+
+  .nav .sub-nav .sub-nav {
+    top: 0;
+    left: 100%;
+  }
+
+  .nav li:hover > input[type="checkbox"] + .sub-nav {
     display: block;
-    text-align: center;
   }
 }
 /* parralax */
 .prlx {
     height: 90vh;
+    width: 100vw;
     overflow-x: hidden;
     overflow-y: auto;
     perspective: 1vh;

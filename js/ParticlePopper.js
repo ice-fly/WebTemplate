@@ -14,7 +14,7 @@ function createParticle(x, y) {
     let destinationY = (Math.random() - 0.5) * 500;
     let rotation = Math.random() * 520;
     let delay = Math.random() * 800;
-    particle.style.backgroundImage = 'url(img/Diamond.png)';
+    particle.style.backgroundImage = 'url(img/particle.png)';
     particle.style.zIndex = 200;
 
     particle.style.width = `${width}px`;
