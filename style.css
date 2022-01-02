@@ -1,4 +1,4 @@
-body, html {
+body {
   --off-txt-clr: #fff;
   --highlight-clr: SteelBlue;
   --backing-clr: Navy;
@@ -7,19 +7,30 @@ body, html {
   color: var(--backing-clr);
   font-weight: 400;
   outline: var(--backing-clr) solid 1px;
-	word-wrap:break-word;
-  overflow: hidden;
+  word-wrap:break-word;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll; 
+  
+}
+body::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
 }
 /* Navigation & responsiveness */
 .navigation {
-  position: sticky;
   width: 100vw;
   min-height: 10vh;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
   overflow-y: show;
   color: var(--off-txt-clr);
   background-color: var(--backing-clr);
   font-weight: 700;
-  z-index: 10;
+  z-index: 100;
 }
 .nav ul {
   margin: 0;
@@ -123,7 +134,7 @@ body, html {
   line-height: 1.618;
 }
 
-@media only screen and (min-width: 52em) {
+@media only screen and (min-width: 60em) and (pointer: fine) {
   .nav .main-nav {
     display: block;
   }
@@ -172,48 +183,72 @@ body, html {
     display: block;
   }
 }
-/* parralax */
+/* parallax */
 .prlx {
-    height: 90vh;
-    width: 100vw;
-    overflow-x: hidden;
-    overflow-y: auto;
-    perspective: 1vh;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  perspective: 300px;
+  transform-origin: center;
+  scrollbar-width: none;
+}
+
+prlx-single {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  perspective: 300px;
+  transform-origin: center;
+  scrollbar-width: none;
 }
 
 .prlx-grp {
-    position: relative;
-    transform-style: preserve-3d;
-    height: 90vh;
+  position: relative;
+  width: 100vw;
+  min-height: 90vh;
+  display: block;
+  transform-style: preserve-3d;
 }
 
 .prlx-lyr {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 90vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
-.prlx-lyr-fore {
-    transform: translateZ(0.5vh) scale(.5);
-    z-index: 1;
+.prlx-lyr--fore {
+  transform: translateZ(90px) scale(.7);
+  z-index: 1;
 }
 
-.prlx-lyr-base {
-    transform: translateZ(0);
-    z-index: 4;
+.prlx-lyr--base {
+  transform: translateZ(0);
 }
 
-.prlx-lyr-back {
-    transform: translateZ(-0.5vh) scale(1.5);
-    z-index: 3;
+.prlx-lyr--back {
+  transform: translateZ(-300px) translateY(-30px) scale(2);
 }
 
-.prlx-lyr-deep {
-    transform: translateZ(-2vh) scale(3);
-    z-index: 2;
+.prlx-lyr--deep {
+  transform: translateZ(-600px) translateY(-60px) scale(3);
+}
+
+.z1 {
+  z-index: 1;
+}
+.z2 {
+  z-index: 1;
+}
+.z3 {
+  z-index: 1;
+}
+.z4 {
+  z-index: 1;
+}
+.z5 {
+  z-index: 1;
 }
 
 /* custom */
@@ -227,40 +262,26 @@ body, html {
   background-image: linear-gradient(transparent,var(--backing-clr));
 }
 
-.prlx-lyr .downgrad {
-    position: relative;
-    top: 0;
+.splash {
+  text-align: center;
+  padding: 20vh 0;
+}
+.splashspace {
+  height: 80vh;
+}
+.off-txt-clr {
+  color: var(--off-txt-clr);
 }
 
-.prlx-lyr .upgrad {
-    position: relative;
-    top: 80vh;
-}
-
-.splashsect {
-  min-height: 90vh;
-}
-
-.splashsect .container {
-  min-height: 75vh;
-  font-size: 2vh;
-  margin: var(--margins);
-  overflow: hidden;
-}
-
-.colorsect {
-    min-height: 90vh;
-    background-color: var(--backing-clr);
-  }
-
-.colorsect .container {
-    min-height: 75vh;
-    font-size: 2vh;
-    padding: var(--margins);
+.color {
+    min-height: 80vh;
     color: var(--off-txt-clr);
-}
+    background-color: var(--backing-clr);
+    padding: var(--margins);
+  }
 
 footer {
   min-height: 10vh;
   background-color: var(--backing-clr);
+  bottom: 0;
 }
